@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Java: Current File (Interactive - Integrated Terminal)",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "mainClass": "${fileBasenameNoExtension}",
+            "stopOnEntry": false
+        },
+        {
+            "type": "java",
+            "name": "Java: Current File (Interactive - External Terminal)",
+            "request": "launch",
+            "console": "externalTerminal",
+            "cwd": "${fileDirname}",
+            "mainClass": "${fileBasenameNoExtension}",
+            "stopOnEntry": false
+        }
+    ]
+}
