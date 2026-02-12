@@ -4,6 +4,10 @@ class QueueMain {
         queue.push(1);
         queue.push(2);
         queue.push(3);
+        queue.push(4);
+        queue.push(5);
+        queue.push(6);
+
 
         System.out.println("Ejemplo de cola peek");
         //salida 1
@@ -16,8 +20,9 @@ class QueueMain {
 
         System.out.println("Pop del primer elemento");
         queue.pop(); //eliminando 2
-        //salida 3
+        //salida 3 
         System.out.println(queue.peek());
+        System.out.println(queue.size());
 
     }
 }

@@ -21,21 +21,16 @@ public class GenericQueue<T> {
         return size == 0;
     }
 
+    
     public void push(T data) {
         Node<T> newNode = new Node<>(data);
-
-        if (first == null) {
-            // COmo es el primer elemento
-            // no tiene siguiente
-            newNode.next = null;
-            // Como es el primer elemnto
-            // el primero es el newNode
+        if (isEmpty()) {
             first = newNode;
+            last = newNode;
         } else {
-            newNode.next = last;
+            last.next = newNode;
+            last = newNode;
         }
-
-        last = newNode;
         size++;
     }
 
@@ -45,17 +40,9 @@ public class GenericQueue<T> {
         }
 
         T data = first.data;
-        Node<T> tmp = null;
-        while (last.next != null) {
-            tmp = last.next;
-            if (last.next != first) {
-                break;
-            }
-        }
-        tmp.next = null;
-        //first = first.next;
-        first = tmp;
-        size--;
+        first = first.next;
+
+        size --;
         return data;
     }
 
